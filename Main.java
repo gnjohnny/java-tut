@@ -1,15 +1,19 @@
+ //Topic -> Exceptions
 
-@FunctionalInterface 
-interface Calculations{
-    int add(int i, int j);
-}
+//  Compile time error
+//  Run time error
+//  Logical error
 
 public class Main{
     public static void main(String[] args){
+        int i = 0;
+        int j = 8;
 
-        Calculations calc = (i, j) -> i + j;
-
-        int results = calc.add(1, 7);
-        System.out.println(results);
+        try{
+            int result = j/i;
+            System.out.println(result);
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
 }
